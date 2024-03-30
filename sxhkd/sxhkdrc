@@ -1,0 +1,35 @@
+
+XF86MonBrightness{Up,Down}
+	brightnessctl set 1%{+,-} >> /dev/null && kill -45 $(pidof dwmblocks)
+
+XF86Audio{Lower,Raise}Volume
+	amixer set Master 5%{-,+} >> /dev/null && kill -44 $(pidof dwmblocks) 
+
+XF86AudioMute
+	amixer set Master toggle >> /dev/null && kill -44 $(pidof dwmblocks) 
+
+XF86AudioMicMute
+	amixer set Capture toggle  >> /dev/null
+
+Print
+	flameshot gui  
+XF86Tools  
+	/home/roccoa/.local/script/toggleTouchPad.sh
+
+super + w 
+	firefox 
+super + n
+	thunar ~
+#st -e lf /home/roccoa
+
+
+super + p 
+	/home/roccoa/.local/script/passmenu.sh 
+
+super + shift + e
+	/home/roccoa/.local/script/powermenu.sh
+
+super + shift + b
+	/home/roccoa/.local/script/networkmanager-dmenu/networkmanager_dmenu && sleep 1s && kill -43 $(pidof dwmblocks) 
+
+

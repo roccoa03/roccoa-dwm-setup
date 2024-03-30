@@ -1,0 +1,13 @@
+#!/bin/bash
+while read file 
+do 
+	fullpath="$(pwd)/$file"
+	case "$1" in 
+	"w")
+		cp "$file" ~/.config/wall.png &&
+#		.~/.local/src/suckless/changeColor.sh
+#		xwallpaper --center "$HOME/.config/wall.png"   --zoom "$HOME/.config/wall.png" 
+		feh --bg-fill --no-fehbg $HOME/.config/wall.png
+		notify-send -i "wallpaper changed"
+	esac
+done

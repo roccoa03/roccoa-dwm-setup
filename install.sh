@@ -18,6 +18,13 @@ mv -r script/* $HOME/.local/script/
 sudo apt install -y make gcc libx11-dev libxft-dev libxinerama-dev xorg 
 
 
+# Installing software required by script folder and .config 
+sudo apt install -y powerprofilesctl dunst sxhkd sxiv pipx mpv flameshot pipewire 
+sudo apt install -y brightnessctl 
+
+pipx ensurepath
+pipx install pywal
+
 
 
 

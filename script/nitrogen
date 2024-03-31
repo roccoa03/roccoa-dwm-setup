@@ -1,0 +1,6 @@
+#!/bin/bash 
+sxiv -t ~/Pictures/wallpapers/*
+
+
+
+
